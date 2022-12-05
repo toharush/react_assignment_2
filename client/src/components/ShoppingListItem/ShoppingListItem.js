@@ -1,18 +1,23 @@
+import { useEffect } from "react";
 import "./ShoppingListItem.css";
 
 function ShoppingListItem(props) {
-  const name = props.name;
-  const imagePath = props.imagePath;
-  const price = props.price;
-  const description = props.description;
+  const item = props.item;
+  const addToCart = props.addToCart;
+  
+  useEffect(() => { 
 
+   }, []);
   return (
     <a className="item">
-      <img src={imagePath} className="item-image" />
+    
+      <img src={item.imagePath} className="item-image" />
       <div className="item-details">
-        <div>{name}</div>
-        <div>{price}</div>
-        <div>{description}</div>
+      {item.count > 1 && !addToCart && <span>{item.count}</span>}
+        <div>{item.name}</div>
+        <div>{item.price}</div>
+        <div>{item.description}</div>
+        {addToCart ? <button onClick={() => addToCart(item)}>AddToCart</button> : ""}
       </div>
     </a>
   );
