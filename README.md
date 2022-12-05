@@ -1,13 +1,25 @@
 # react_assignment_2
 
-installing DATABSE
-  https://fastdl.mongodb.org/windows/mongodb-windows-x86_64-6.0.3-signed.msi
-Can also working with cloud based db.
+## Installation
+Working Cloud based or local
+### DATABSE
+  [mongodb](https://fastdl.mongodb.org/windows/mongodb-windows-x86_64-6.0.3-signed.msi)
   
+```env
+  PORT=NUMBER
+  MONGO_URI=URI_CLOUD_OR_LOCAL
+```
+  
+## Starting the server
 
+```nodejs
 
-Starting the server
+# move to server folder
+cd server
 
-  cd server
-  npm install
-  npm start
+# install dependencies
+npm install
+
+# start the server
+npm start
+```
