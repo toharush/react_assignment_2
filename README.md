@@ -4,10 +4,16 @@
 Working Cloud based or local
 ### DATABSE
   [mongodb](https://fastdl.mongodb.org/windows/mongodb-windows-x86_64-6.0.3-signed.msi)
-  
+
+## env
+### server
 ```env
   PORT=NUMBER
   MONGO_URI=URI_CLOUD_OR_LOCAL
+```
+### client
+```env
+  REACT_APP_SERVER_API=URI_TO_SERVER
 ```
   
 ## Starting the server
