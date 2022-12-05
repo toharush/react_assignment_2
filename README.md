@@ -13,7 +13,6 @@ Working Cloud based or local
 ## Starting the server
 
 ```nodejs
-
 # move to server folder
 cd server
 
