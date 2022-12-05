@@ -2,6 +2,8 @@
 
 installing DATABSE
   https://fastdl.mongodb.org/windows/mongodb-windows-x86_64-6.0.3-signed.msi
+Can also working with cloud based db.
+  
 
 
 Starting the server
