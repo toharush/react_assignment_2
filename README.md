@@ -22,3 +22,15 @@ npm install
 # start the server
 npm start
 ```
+## Starting the Client
+
+```nodejs
+# move to client folder
+cd client
+
+# install dependencies
+npm install
+
+# start the client
+npm start
+```
