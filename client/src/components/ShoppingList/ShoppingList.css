@@ -1,12 +1,6 @@
 .shoppingListBody {
     align-items: center;
-    display: inline-block;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.Cart-Container {
-    width: 70%;
-    height: 85%;
-    background-color: #ffffff;
-    border-radius: 20px;
-    box-shadow: 0px 25px 40px #1687d933;
-}

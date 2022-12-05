@@ -1,16 +1,17 @@
 import "./ShoppingList.css";
 import ShoppingListItem from "../ShoppingListItem/ShoppingListItem";
-import { useState, useEffect } from "react";
 
 function ShoppingList(props) {
-  const addToCart = props.addToCart
-  useEffect(() => {  }, []);
+  const addToCart = props.addToCart;
+  const handleChangeAmount = props.handleChangeAmount;
+
   return (
-    <div className="shoppingListBody">
+    <div className="shoppingListBody row">
       {props.items.map((item) => (
         <ShoppingListItem
           addToCart={addToCart}
           item={item}
+          handleChangeAmount={handleChangeAmount}
         />
       ))}
     </div>

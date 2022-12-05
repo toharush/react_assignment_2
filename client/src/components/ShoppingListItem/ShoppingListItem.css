@@ -1,83 +1,46 @@
+body {
+    min-height: 100vh
+}
+
+.text-gray {
+    color: #aaa
+}
+
+img {
+    height: 170px;
+    width: 140px
+}
+
 .item {
-    margin: 1%;
-    height: 100%;
-    border: 1px solid #ccc!important;
-    border-radius: 1%;
-    width: 98%;
-    display: flex;
-    border-radius: 5px;
-    direction: rtl;
-    padding: 0.5rem;
-    background-color: rgba(0, 255, 238, 1);
+    height: 20%;
 }
 
-.item-image {
-    padding: 5px 0px 5px 0px; 
-    float: right;
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.4);
-    max-height: 70px;
-    margin: auto;
-    display: block;
-}
+.custom-button {
+    width: 110px!important;
+    height: 30px;
+    font-size: medium;
+    background-color: #E1E8EE;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+  }
 
-.item-details-image {
-    max-height: 150px;
-    float: left;
-    padding: 5px 0px 5px 0px;
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.4);
-}
+  .cartListItem {
+    width: 100%;
+    margin: 0px 30px 15px 30px;
+  }
 
-.item-details {
-    width: 700px;
-    max-width: 700px;
-    max-height: 100%;
-    float: left;
-}
+  .shoppingListItem { 
+    flex: 40%;
+    max-width: 535px;
+    padding: 1%;
+  }
 
-.item-name {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: white;
-    background-color: rgba(77, 0, 255, 1);
-    border: 1px solid white;
-    padding: 0.5rem;
-    border-radius: 12px;
-}
+  .plusMinusButton { 
+    border-radius: 50%!important;
+    font-size: small;
+  }
 
-.item-price {
-    font-size: 1rem;
-    color: white;
-    background-color: rgba(77, 0, 255, 1);
-    border: 1px solid white;
-    padding: 0.5rem;
-    border-radius: 12px;
-}
-
-.item-description {
-    font-size: 1rem;
-    color: white;
-    background-color: rgba(95, 2, 185, 1);
-    border: 1px solid white;
-    padding: 0.5rem;
-    border-radius: 12px;
-}
-
-.item-store-name {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: white;
-    background-color: rgba(95, 2, 185, 1);
-    border: 1px solid white;
-    padding: 0.5rem;
-    border-radius: 12px;
-}
-
-.x {
-    top: 32px;
-    width: 40px;
-    height: 32px;
-    opacity: 0.3;
-    float: left;
-}
+  .count { 
+    padding: 10px;
+  }
