@@ -6,7 +6,11 @@ function ShoppingListItem(props) {
   const addToCart = props.addToCart;
   const handleChangeAmount = props.handleChangeAmount;
 
-  useEffect(() => {}, []);
+  const handleClick = (event) => {
+    addToCart(item);
+    event.currentTarget.classList.toggle("clicked");
+  };
+
   return (
     <div className={addToCart ? "item shoppingListItem" : "cartListItem item"}>
       <div className="list-group-item">
@@ -18,14 +22,27 @@ function ShoppingListItem(props) {
             </p>
             <h6 className="font-weight-bold  my-2">$ {item.price}</h6>
             {addToCart ? (
-              <button className="custom-button" onClick={() => addToCart(item)}>
-                Add To Cart
+              <button class="custom-button cart-button" onClick={handleClick}>
+                <span class="add-to-cart">Add to cart</span>
+                <span class="added">Added</span>
+                <i class="fas fa-shopping-cart"></i>
+                <i class="fas fa-box"></i>
               </button>
             ) : (
               <div className="mainDiv">
-                <button className="btn plusMinusButton"  onClick={() => handleChangeAmount(item, item.count - 1)}>-</button>
+                <button
+                  className="btn plusMinusButton"
+                  onClick={() => handleChangeAmount(item, item.count - 1)}
+                >
+                  -
+                </button>
                 <span className="count">{item.count}</span>
-                <button className="btn plusMinusButton" onClick={() => handleChangeAmount(item, item.count + 1)}>+</button>
+                <button
+                  className="btn plusMinusButton"
+                  onClick={() => handleChangeAmount(item, item.count + 1)}
+                >
+                  +
+                </button>
               </div>
             )}
           </div>

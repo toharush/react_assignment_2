@@ -8,11 +8,11 @@ function ShoppingCart(props) {
 
   useEffect(() => {
     let prc = 0;
-    props.items.forEach(item => {
-        prc += item.price * item.count;
+    props.items.forEach((item) => {
+      prc += item.price * item.count;
     });
     setPrice(prc);
-  }, [props.items])
+  }, [props.items]);
 
   return (
     <div className="shopping-cart">

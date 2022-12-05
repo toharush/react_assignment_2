@@ -6,7 +6,7 @@ import ShoppingCart from "./components/ShoppingCart/ShoppingCart";
 function App() {
   const [items, setItems] = useState([]);
   const [cartItems, setCartItems] = useState([]);
-  const [shppingCart, setshppingCart] = useState(true);
+  const [shppingCart, setshppingCart] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -41,12 +41,12 @@ function App() {
     const itemIndex = cartItems.findIndex(
       (cartItem) => cartItem._id == item._id
     );
-      if(count > 0){
-        cartItems[itemIndex].count = count;
-      } else {
-        cartItems.splice(itemIndex, 1);
-      }
-      setCartItems([...cartItems]);
+    if (count > 0) {
+      cartItems[itemIndex].count = count;
+    } else {
+      cartItems.splice(itemIndex, 1);
+    }
+    setCartItems([...cartItems]);
   }
 
   return (
@@ -54,19 +54,27 @@ function App() {
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
           <a className="navbar-brand" href="#">
-            Shopping Cart
+            Shopping
           </a>
         </div>
         <div>
-          <button onClick={() => setshppingCart(!shppingCart)}>Go To Cart</button>
+          <button
+            className="navbar-brand"
+            onClick={() => setshppingCart(!shppingCart)}
+          >
+            Go To Cart
+          </button>
         </div>
       </nav>
 
       <div className="App">
         {shppingCart ? (
-          <ShoppingCart items={cartItems} handleChangeAmount={handleChangeAmount} />
+          <ShoppingCart
+            items={cartItems}
+            handleChangeAmount={handleChangeAmount}
+          />
         ) : (
-          <ShoppingList items={items} addToCart={addToCart}  />
+          <ShoppingList items={items} addToCart={addToCart} />
         )}
       </div>
     </div>
