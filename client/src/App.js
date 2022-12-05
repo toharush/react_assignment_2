@@ -59,10 +59,10 @@ function App() {
         </div>
         <div>
           <button
-            className="navbar-brand"
+            className="custom-btn"
             onClick={() => setshppingCart(!shppingCart)}
           >
-            Go To Cart
+           {shppingCart ? <i class="fas fa-shopping-cart"></i> : <i class="fa-solid fa-house-user"></i> }
           </button>
         </div>
       </nav>
