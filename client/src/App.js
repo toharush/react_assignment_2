@@ -62,7 +62,11 @@ function App() {
             className="custom-btn"
             onClick={() => setshppingCart(!shppingCart)}
           >
-           {shppingCart ? <i class="fas fa-shopping-cart"></i> : <i class="fa-solid fa-house-user"></i> }
+            {shppingCart ? (
+              <i class="fas fa-shopping-cart"></i>
+            ) : (
+              <i class="fa-solid fa-house-user"></i>
+            )}
           </button>
         </div>
       </nav>
