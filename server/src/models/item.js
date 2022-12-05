@@ -6,6 +6,8 @@ const itemSchema = new Schema(
     _id: String,
     name: String,
     price: Number,
+    description: String,
+    imgaePath: String
   },
   {
     collection: "item",
