@@ -1,8 +1,13 @@
-const { application } = require('express');
+const maionRouter = require('./src/routes/main');
+const dotenv = require('dotenv');
 const express = require('express');
 const app = express(); 
-const maionRouter = require('./src/routes/main');
+
+dotenv.config();
+require('./src/utils/db-client');
+
+const PORT = process.env.PORT || 8080;
 
 app.use('/api/v1', maionRouter);
 
-app.listen(process.env.PORT, () => console.log(`App listen on port ${process.env.PORT}`));
+app.listen(PORT, () => console.log(`App listen on port ${PORT}`));
