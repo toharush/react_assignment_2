@@ -1,0 +1,83 @@
+.item {
+    margin: 1%;
+    height: 100%;
+    border: 1px solid #ccc!important;
+    border-radius: 1%;
+    width: 100%;
+    display: flex;
+    border-radius: 5px;
+    direction: rtl;
+    padding: 0.5rem;
+    background-color: rgba(0, 255, 238, 1);
+}
+
+.item-image {
+    padding: 5px 0px 5px 0px; 
+    float: right;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.4);
+    max-height: 70px;
+    margin: auto;
+    display: block;
+}
+
+.item-details-image {
+    max-height: 150px;
+    float: left;
+    padding: 5px 0px 5px 0px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.4);
+}
+
+.item-details {
+    width: 700px;
+    max-width: 700px;
+    max-height: 100%;
+    float: left;
+}
+
+.item-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(77, 0, 255, 1);
+    border: 1px solid white;
+    padding: 0.5rem;
+    border-radius: 12px;
+}
+
+.item-price {
+    font-size: 1rem;
+    color: white;
+    background-color: rgba(77, 0, 255, 1);
+    border: 1px solid white;
+    padding: 0.5rem;
+    border-radius: 12px;
+}
+
+.item-description {
+    font-size: 1rem;
+    color: white;
+    background-color: rgba(95, 2, 185, 1);
+    border: 1px solid white;
+    padding: 0.5rem;
+    border-radius: 12px;
+}
+
+.item-store-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(95, 2, 185, 1);
+    border: 1px solid white;
+    padding: 0.5rem;
+    border-radius: 12px;
+}
+
+.x {
+    top: 32px;
+    width: 40px;
+    height: 32px;
+    opacity: 0.3;
+    float: left;
+}
