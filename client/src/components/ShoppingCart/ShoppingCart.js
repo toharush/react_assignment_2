@@ -14,6 +14,19 @@ function ShoppingCart(props) {
     setPrice(prc);
   }, [props.items]);
 
+  function handleSave() {
+    let itemsIds = [];
+    props.items.forEach((item) => itemsIds.push(item._id));
+    const requestOptions = {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ items: itemsIds }),
+    };
+    fetch(`${process.env.REACT_APP_SERVER_API}/cart`, requestOptions)
+      .then((response) => response.json())
+      .then((data) => this.setState({ postId: data.id }));
+  }
+
   return (
     <div className="shopping-cart">
       <div className="title">Shopping Bag</div>
@@ -24,6 +37,12 @@ function ShoppingCart(props) {
         />
       </div>
       <div className="total-price">$ {price}</div>
+      <button
+        className="custom-button btn-success"
+        onClick={() => handleSave()}
+      >
+        Save To Db
+      </button>
     </div>
   );
 }
