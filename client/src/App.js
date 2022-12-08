@@ -6,7 +6,7 @@ import ShoppingCart from "./components/ShoppingCart/ShoppingCart";
 function App() {
   const [items, setItems] = useState([]);
   const [cartItems, setCartItems] = useState([]);
-  const [shppingCart, setshppingCart] = useState(false);
+  const [shppingCart, setShppingCart] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -60,12 +60,12 @@ function App() {
         <div>
           <button
             className="custom-btn"
-            onClick={() => setshppingCart(!shppingCart)}
+            onClick={() => setShppingCart(!shppingCart)}
           >
             {shppingCart ? (
-              <i class="fas fa-shopping-cart"></i>
-            ) : (
               <i class="fa-solid fa-house-user"></i>
+            ) : (
+              <i class="fas fa-shopping-cart"></i>
             )}
           </button>
         </div>

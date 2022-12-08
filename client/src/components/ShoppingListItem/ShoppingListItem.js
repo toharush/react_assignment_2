@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import "./ShoppingListItem.css";
 
 function ShoppingListItem(props) {
