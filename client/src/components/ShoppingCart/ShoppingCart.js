@@ -15,12 +15,14 @@ function ShoppingCart(props) {
   }, [props.items]);
 
   function handleSave() {
-    let itemsIds = [];
-    props.items.forEach((item) => itemsIds.push(item._id));
+    let itemState = [];
+    props.items.forEach((item) =>
+      itemState.push({ _id: item._id, count: item.count })
+    );
     const requestOptions = {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ items: itemsIds }),
+      body: JSON.stringify({ items: itemState }),
     };
     fetch(`${process.env.REACT_APP_SERVER_API}/cart`, requestOptions)
       .then((response) => response.json())
